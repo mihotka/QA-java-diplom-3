@@ -1,0 +1,12 @@
+com\Base.class
+com\model\UserRegisterResponse.class
+com\settings\WebDriverSettings.class
+com\model\User.class
+com\settings\UserInfo.class
+com\pgae_object\ForgotPasswordPage.class
+com\pgae_object\MainPage.class
+com\pgae_object\RegistrationPage.class
+com\UserOperations.class
+com\model\Tokens.class
+com\pgae_object\LoginPage.class
+com\pgae_object\PrivateRoomPage.class
