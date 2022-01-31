@@ -6,8 +6,6 @@ import com.codeborne.selenide.*;
 import io.qameta.allure.Step;
 import io.qameta.allure.junit4.DisplayName;
 
-import static org.junit.Assert.assertEquals;
-
 import static com.codeborne.selenide.Selectors.*;
 import static com.codeborne.selenide.Selenide.*;
 
@@ -33,7 +31,6 @@ public class RegistrationPage {
         input.get(1).setValue(userInfo.email);
         input.get(2).setValue(userInfo.password);
         registrationButton.click();
-        authorizationButton.should(Condition.visible);
     }
     @Step
     @DisplayName("Неуспешная регистрация с невалидным паролем")
@@ -43,7 +40,5 @@ public class RegistrationPage {
         input.get(1).setValue(userInfo.email);
         input.get(2).setValue("1s");
         registrationButton.click();
-        passwordError.should(Condition.visible);
-        assertEquals(passwordError.text(),passwordErrorMessage);
     }
 }

@@ -1,5 +1,6 @@
 package com.yandex;
 
+import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.WebDriverRunner;
 import com.pgae_object.ForgotPasswordPage;
 import com.pgae_object.LoginPage;
@@ -52,7 +53,8 @@ public class LoginTest extends WebDriverSettings {
     @After
     public void login() {
         String currentUrl = WebDriverRunner.getWebDriver().getCurrentUrl();
-        assertEquals(currentUrl, mainPage.mainPageUrl + "login");
+        assertEquals("URL не совпадает",mainPage.mainPageUrl + "login", currentUrl);
         loginPage.loginByUser();
+        mainPage.mainBlockText.should(Condition.visible);
     }
 }

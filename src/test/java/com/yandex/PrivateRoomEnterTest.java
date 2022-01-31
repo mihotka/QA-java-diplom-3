@@ -24,6 +24,7 @@ public class PrivateRoomEnterTest extends WebDriverSettings {
     public void privateRoomEnterByButtonTest() {
         open(loginPage.loginPageUrl);
         loginPage.loginByUser();
+        mainPage.mainBlockText.should(Condition.visible);
         mainPage.privateRoomButton.click();
         privateRoomPage.exitProfileButton.should(Condition.visible);
     }

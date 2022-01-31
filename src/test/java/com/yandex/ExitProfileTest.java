@@ -22,9 +22,10 @@ public class ExitProfileTest extends WebDriverSettings {
     public void exitProfileByButtonTest() {
         open(loginPage.loginPageUrl);
         loginPage.loginByUser();
+        mainPage.mainBlockText.should(Condition.visible);
         mainPage.privateRoomButton.click();
         privateRoomPage.exitProfileButton.click();
         loginPage.loginPageText.should(Condition.visible);
-        assertEquals(loginPage.loginButton.getText(), "Войти");
+        assertEquals("Неверно отображается текст на кнопке Войти", "Войти", loginPage.loginButton.getText());
     }
 }
