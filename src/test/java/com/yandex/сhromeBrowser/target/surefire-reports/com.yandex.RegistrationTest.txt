@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: com.yandex.RegistrationTest
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 8.485 s <<< FAILURE! - in com.yandex.RegistrationTest
+errorMessageWithInvalidPasswordTest(com.yandex.RegistrationTest)  Time elapsed: 4.893 s  <<< FAILURE!
+org.junit.ComparisonFailure: expected:<[Некорректный пароль]> but was:<[Введите не менее 6 символов]>
+	at com.yandex.RegistrationTest.errorMessageWithInvalidPasswordTest(RegistrationTest.java:26)
+
